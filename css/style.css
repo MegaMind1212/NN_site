@@ -72,7 +72,7 @@ body {
   font-family: "Outfit", sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.5);
+  color: black;
   line-height: 150%;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
@@ -189,7 +189,7 @@ h1,
 @media screen and (max-width: 1400px) {
   h1,
 .mil-h1 {
-    font-size: 38px;
+    font-size: 74px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -2281,8 +2281,47 @@ partners
   display: block;
 }
 .mil-partner-frame img {
-  width: 192%;
+  width: 100%;
 }
+.mil-partners-strip {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Allows horizontal scrolling if the content overflows */
+  padding: 20px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.mil-partner-frame {
+  flex: 0 0 auto; /* Prevents flex items from shrinking */
+  padding: 10px; /* Adds some spacing around each logo */
+}
+
+.mil-partner-frame img {
+  width: 100%;
+  object-fit: cover; /* Ensures images maintain aspect ratio */
+  height: auto; /* Allows images to adjust height based on aspect ratio */
+}
+.mil-partners-slider {
+  width: 100%; /* Adjust width as needed */
+  height: auto; /* Adjust height as needed */
+}
+
+.swiper-slide {
+  text-align: center; /* Ensure slides are centered */
+}
+
+.mil-partner-frame {
+  display: block;
+  padding: 10px; /* Adjust spacing around each logo */
+}
+
+.mil-partner-frame img {
+  max-width: auto; /* Ensure images are responsive */
+  height: 100%; /* Maintain aspect ratio */
+}
+
+
 
 /* -------------------------------------------
 
@@ -2504,9 +2543,6 @@ services
   border-top: solid 1px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
 /* -------------------------------------------
 
 team
@@ -2667,6 +2703,7 @@ social icons
 revievs
 
 ------------------------------------------- */
+
 .mil-revi-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3389,6 +3426,7 @@ portfolio
     display: flex;
   }
 }
+
 
 /***************************
 

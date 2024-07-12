@@ -1,0 +1,32 @@
+.mil-partner-frame img {
+    width: 200px; /* Adjust this value to ensure uniform size */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#ourclients .clients-wrap {
+    overflow: hidden;
+}
+
+#ourclients #clientlogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ourclients #clientlogo li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

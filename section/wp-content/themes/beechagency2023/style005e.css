@@ -1,0 +1,28 @@
+/*!
+Theme Name: Beech Agency 2023
+Theme URI: http:/beech.agency/
+Author: Beech Agency
+Author URI: http:/beech.agency/
+Description: A block theme for Beech Agency
+Version: 3.1.6
+Tested up to: 6.5
+Requires PHP: 8.1
+Slug: beechagency2023
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: beechagency2023
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+@import url('css/xylem.v26639.css?v=3.1.6');
+@import url('css/base6639.css?v=3.1.6');
+@import url('css/header6639.css?v=3.1.6');
+@import url('css/footer6639.css?v=3.1.6');
+@import url('css/forms6639.css?v=3.1.6');
+
+@import url('css/_tablet6639.css?v=3.1.6');
+@import url('css/_mobile6639.css?v=3.1.6');
+
+
+@import url('css/metal6639.css?v=3.1.6');
+@import url('css/sugar6639.css?v=3.1.6');
