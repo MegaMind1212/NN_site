@@ -7,9 +7,7 @@
     
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/facon.png">
-    <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/meanmenu.css">
     <link rel="stylesheet" href="assets/css/animate.css">
@@ -23,138 +21,102 @@
     <link rel="stylesheet" href="assets/css/odometer.css">
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        @media (max-width: 600px) {
+            .team-area__title-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                width: 100%;
+            }
+            .profile {
+                width: 100%;
+                max-width: 238.4px; /* Ensures profiles do not stretch beyond desired size */
+                margin: 0 auto;
+            }
+            h2 {
+                font-size: 2em; /* Adjust as needed */
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-    
-    
-
-    <!-- mouse cursor drag start -->
-    <div class="mouseCursor cursor-outer"></div>
-    <div class="mouseCursor cursor-inner"><span>Drag</span></div>
-    <!-- mouse cursor drag end -->
-<!-- team area start  -->
-<section class="team-area section-spacing p-relative">
-    <div class="team-area__overlay" data-background="assets/img/bg/box-gradient-bg.jpg"></div>
-    <div class="container">
-        <div class="row align-items-end g-5 section-title-spacing">
-            <div class="col-lg-6">
-                <div class="section__title-wrapper">
-                    <div class="section__subtitle">
-                        <div class="section__subtitle-icon">
-                            <!--<img src="assets/img/shapesection-title-star.png" alt="image not found">-->
+    <!-- team area start -->
+    <section class="team-area section-spacing p-relative" style="background-color: #F6F6F6;">
+        <div class="team-area__overlay" data-background="assets/img/bg/box-gradient-bg.jpg"></div>
+        <div class="container">
+            <div class="row align-items-end g-5 section-title-spacing team-area__title-wrapper">
+                <div class="col-lg-6">
+                    <div class="section__title-wrapper">
+                        <div class="section__subtitle">
+                            <div class="section__subtitle-icon">
+                                <!--<img src="assets/img/shapesection-title-star.png" alt="image not found">-->
+                            </div>
+                            <p class="section__subtitle-text">
+                                Nexus Nodes team
+                            </p>
                         </div>
-                        <p class="section__subtitle-text">
-                            Nexus Nodes team
+                        <h2 class="section__title-main xlarge uppercase title-anim">Our <br> team
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="team__meta-description mb-10">
+                        <p class="xlarge">Top Educators from leading firms globally, with cross-border and cross-jurisdictional experience, providing unparalleled value to learners.
                         </p>
                     </div>
-                    <h2 class="section__title-main xlarge uppercase title-anim">Our <br> team
-                    </h2>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="team__meta-description mb-10">
-                    <p class="xlarge">Top Educators from leading firms globally, with cross-border and cross-jurisdictional experience, providing unparalleled value to learners.
-                    </p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="team__wrapper anim-skewinup">
-            <div class="team__member">
-                <span class="member-designation">Co-Founder</span>
-                <a href="team-dtails.html">
-                    <div class="member-name">
-                        <span class="first-name">Garv </span>
-                        <div class="member-image"><img src="assets/img/team/testz.jpg"
-                                alt="image not found">
-                        </div>
-                        <span class="last-name">Sultania</span>
-                    </div>
-                </a>
-                <div class="member-details-btn btn_wrapper">
-                    <a class="c-button btn-moving" href="https://www.linkedin.com/in/garvsultania/">
-                        <span class="c-button__border"></span>
-                        <span class="c-button__text">Contact</span>
-                    </a>
+        <div class="container">
+            <div class="team__wrapper anim-skewinup team-grid">
+                <!-- Profile 1 -->
+                <div class="profile" style="box-sizing: border-box; text-align: center;">
+                    <img src="../img/works/1b.jpeg" alt="Profile 1" style="width: 238.4px; height: 238.4px; border-radius: 15px;">
+                    <div style="margin-top: 10px; font-size: 1.2em; font-weight: bold;">John Doe</div>
+                    <div style="font-size: 1em; color: #555;">CEO</div>
+                </div>
+                <!-- Profile 2 -->
+                <div class="profile" style="box-sizing: border-box; text-align: center;">
+                    <img src="../img/works/1b.jpeg" alt="Profile 2" style="width: 238.4px; height: 238.4px; border-radius: 15px;">
+                    <div style="margin-top: 10px; font-size: 1.2em; font-weight: bold;">Jane Smith</div>
+                    <div style="font-size: 1em; color: #555;">CTO</div>
+                </div>
+                <!-- Profile 3 -->
+                <div class="profile" style="box-sizing: border-box; text-align: center;">
+                    <img src="../img/works/1b.jpeg" alt="Profile 3" style="width: 238.4px; height: 238.4px; border-radius: 15px;">
+                    <div style="margin-top: 10px; font-size: 1.2em; font-weight: bold;">Alice Johnson</div>
+                    <div style="font-size: 1em; color: #555;">CFO</div>
+                </div>
+                <!-- Profile 4 -->
+                <div class="profile" style="box-sizing: border-box; text-align: center;">
+                    <img src="../img/works/1b.jpeg" alt="Profile 4" style="width: 238.4px; height: 238.4px; border-radius: 15px;">
+                    <div style="margin-top: 10px; font-size: 1.2em; font-weight: bold;">Bob Brown</div>
+                    <div style="font-size: 1em; color: #555;">COO</div>
+                </div>
+                <!-- Profile 5 -->
+                <div class="profile" style="box-sizing: border-box; text-align: center;">
+                    <img src="../img/works/1b.jpeg" alt="Profile 5" style="width: 238.4px; height: 238.4px; border-radius: 15px;">
+                    <div style="margin-top: 10px; font-size: 1.2em; font-weight: bold;">Charlie Green</div>
+                    <div style="font-size: 1em; color: #555;">CMO</div>
+                </div>
+                <!-- Profile 6 -->
+                <div class="profile" style="box-sizing: border-box; text-align: center;">
+                    <img src="../img/works/1b.jpeg" alt="Profile 6" style="width: 238.4px; height: 238.4px; border-radius: 15px;">
+                    <div style="margin-top: 10px; font-size: 1.2em; font-weight: bold;">Emma White</div>
+                    <div style="font-size: 1em; color: #555;">CMO</div>
                 </div>
             </div>
-            <div class="team__member">
-                <span class="member-designation">Co-Founder</span> 
-                <a href="team-detils.html">
-                    <div class="member-name">
-                        <span class="first-name">Prathik  </span>
-                        <div class="member-image">
-                            <img src="assets/img/team/testz.jpg" alt="image not found">
-                        </div>
-                        <span class="last-name">Karthikeyan</span>
-                    </div>
-                </a>
-                <div class="member-details-btn btn_wrapper">
-                    <a class="c-button btn-moving" href=" https://www.linkedin.com/in/prathik-karthikeyan-7b9867a4/">
-                        <span class="c-button__border"></span>
-                        <span class="c-button__text">Contact</span>
-                    </a>
-                </div>
-            </div>
-            <div class="team__member">
-                <span class="member-designation">Founding Member</span> 
-                <a href="team-detils.html">
-                    <div class="member-name">
-                        <span class="first-name">Tejas </span>
-                        <div class="member-image">
-                            <img src="assets/img/team/testz.jpg" alt="image not found">
-                        </div>
-                        <span class="last-name">Gulati</span>
-                    </div>
-                </a>
-                <div class="member-details-btn btn_wrapper">
-                    <a class="c-button btn-moving" href="https://www.linkedin.com/in/tejasgulati/">
-                        <span class="c-button__border"></span>
-                        <span class="c-button__text">Contact</span>
-                    </a>
-                </div>
-            </div>
-            <div class="team__member">
-                <span class="member-designation">Developer</span>
-                <a href="team-deails.html">
-                    <div class="member-name">
-                        <span class="first-name">yash</span>
-                        <div class="member-image">
-                            <img src="assets/img/team/testz.jpg" alt="image not found">
-                        </div>
-                        <span class="last-name">Borkar</span>
-                    </div>
-                </a>
-                <div class="member-details-btn btn_wrapper">
-                    <a class="c-button btn-moving" href="team-deails.html">
-                        <span class="c-button__border"></span>
-                        <span class="c-button__text">Details</span>
-                    </a>
-                </div>
-            </div>
-            <div class="team__member">
-                <!-- <span class="member-designation">Web Developer</span> -->
-                <a href="team-detils.html">
-                    <div class="member-name">
-                        <span class="first-name">Place  </span>
-                        <div class="member-image">
-                            <img src="assets/img/team/team-3.jpg" alt="image not found">
-                        </div>
-                        <span class="last-name">Holder</span>
-                    </div>
-                </a>
-                <div class="member-details-btn btn_wrapper">
-                    <a class="c-button btn-moving" href="team-deails.html">
-                        <span class="c-button__border"></span>
-                        <span class="c-button__text">Details</span>
-                    </a>
-                </div>
-            </div>
-             
         </div>
-    </div>
-</section>
-<!-- team area end  -->
+    </section>
+    <!-- team area end -->
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Loop Carousel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Hide overflow to prevent scrollbars */
+            background-color: #000; /* Black background */
+        }
+
+        .title {
+            position: fixed;
+            left: 20px; /* Move the title a little away from the left margin */
+            top: 100px; /* Bring the title a little down from the top */
+            font-size: 65px; /* Font size of 65px */
+            font-weight: bold; /* Make the font bolder */
+            color: #fff; /* White color for better contrast on black background */
+            white-space: nowrap; /* Prevent text from wrapping */
+            z-index: 1000; /* Ensure the title is on top */
+            transition: top 0.3s, left 0.3s; /* Smooth transition for responsiveness */
+        }
+
+        .container {
+            height: 100vh;
+            overflow: scroll; /* Enable scrolling for the entire page */
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: flex-end; /* Align items to the right */
+            padding-right: 20px; /* Padding from the right end */
+        }
+
+        .carousel {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Align items to the right */
+            padding: 20px; /* Padding around the carousel */
+        }
+
+        .carousel-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Align items to the right */
+        }
+
+        .card {
+            width: 452px; /* Adjusted width */
+            height: 410px; /* Adjusted height */
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Spacing between cards */
+            padding: 20px; /* Padding inside cards */
+            padding-right: 20px; /* Padding on the right side */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-sizing: border-box;
+            cursor: pointer; /* Pointer cursor for clickable cards */
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px; /* Fixed height for images */
+            object-fit: cover; /* Maintain image aspect ratio */
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin: 15px 0 5px;
+            font-size: 1.2em;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 50px; /* Smaller title size for smaller screens */
+                left: 10px; /* Less margin from the left */
+                top: 70px; /* Adjust top position */
+                padding-left: 10px; /* Add padding to the left */
+                padding-top: 10px; /* Add padding to the top */
+            }
+
+            .container {
+                display: block; /* Make container block to stack title on top */
+                padding-right: 0; /* Remove right padding */
+            }
+
+            .title {
+                position: static; /* Make title static to flow with content */
+                margin-bottom: 20px; /* Space between title and cards */
+            }
+
+            .card {
+                width: 90%; /* Responsive width */
+                height: auto; /* Adjust height to maintain aspect ratio */
+                margin: 10px auto; /* Center cards horizontally */
+            }
+
+            .card img {
+                height: 150px; /* Smaller image height */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 40px; /* Even smaller title size for very small screens */
+                left: 5px; /* Minimal margin from the left */
+                top: 50px; /* Adjust top position */
+                padding-left: 15px; /* Minimal padding to the left */
+                padding-top: 15px; /* Minimal padding to the top */
+            }
+
+            .card {
+                width: 95%; /* Maximize card width for very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Our Courses</div>
+    <div class="container">
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="card" onclick="window.open('../Course1.html', '_blank');">
+                    <img src="../img/works/1b.jpeg" alt="Course 1 Image">
+                    <h3>Data Protection Officer</h3>
+                    <p>Become a certified Data Protection Officer</p>
+                </div>
+                <div class="card" onclick="window.open('../Course2.html', '_blank');">
+                    <img src="../img/works/2.jpeg" alt="Course 2 Image">
+                    <h3>Artificial Intelligence Law & Practice</h3>
+                    <p>Dive into the legal aspects of AI</p>
+                </div>
+                <div class="card" onclick="window.open('../Course3.html', '_blank');">
+                    <img src="../img/works/3.png" alt="Course 3 Image">
+                    <h3>Web3 Law & Practice</h3>
+                    <p>Understand the legal framework of Web3</p>
+                </div>
+                <div class="card" onclick="window.open('../Coursex.html', '_blank');">
+                    <img src="../img/works/4.png" alt="Course 4 Image">
+                    <h3>Space Law & Practice</h3>
+                    <p>Explore the laws governing outer space activities</p>
+                </div>
+                <div class="card" onclick="window.open('../Coursex.html', '_blank');">
+                    <img src="../img/works/5.png" alt="Course 5 Image">
+                    <h3>Fashiontech Law & Practice</h3>
+                    <p>Delve into the intersection of fashion and technology</p>
+                </div>
+                <div class="card" onclick="window.open('../Coursex.html', '_blank');">
+                    <img src="../img/works/6.png" alt="Course 6 Image">
+                    <h3>Renewable Energy Law & Practice</h3>
+                    <p>Study the regulations driving the renewable energy sector</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

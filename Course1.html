@@ -258,6 +258,112 @@
                 </div>
                 <!-- banner end -->
 
+                <!-- Countdown Section -->
+<div id="countdown" class="countdown">
+    <h2>Countdown to Course Start:</h2>
+    <div id="countdown-timer">
+        <span id="days">00</span> days
+        <span id="hours">00</span> hours
+        <span id="minutes">00</span> minutes
+        <span id="seconds">00</span> seconds
+    </div>
+</div>
+
+<!-- Countdown JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    function updateCountdown() {
+        var now = new Date();
+        var targetDate = new Date('August 1, 2024 00:00:00');
+        var timeDifference = targetDate - now;
+        
+        var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').textContent = days < 10 ? '0' + days : days;
+        document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
+        document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+        document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
+        
+        if (timeDifference < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById('countdown-timer').innerHTML = 'Course has started!';
+        }
+    }
+
+    var countdownInterval = setInterval(updateCountdown, 1000);
+});
+</script>
+
+<!-- Countdown CSS -->
+<style>
+.countdown {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    max-width: 90%;
+    width: 400px; /* Adjust width for larger screens */
+}
+
+.countdown h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#countdown-timer {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#countdown-timer span {
+    padding: 0 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .countdown {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .countdown h2 {
+        font-size: 20px;
+    }
+
+    #countdown-timer {
+        font-size: 24px;
+    }
+
+    #countdown-timer span {
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .countdown {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .countdown h2 {
+        font-size: 18px;
+    }
+
+    #countdown-timer {
+        font-size: 20px;
+    }
+
+    #countdown-timer span {
+        padding: 0 3px;
+    }
+}
+</style>
+
                 <!-- service -->
                 <section id="service">
                     <div class="container mil-p-120-90">
@@ -359,6 +465,142 @@
                                         <p class="mil-mb-30">Final Test (100%) – A comprehensive online examination that covers all course materials, designed to test the participants' overall understanding and mastery of the course.</p>
                                     </div>
                                 </div>
+                                </div>
+
+
+                                <!-- Educators Profile Section -->
+<div class="educators-profile-section">
+    <h2>Meet Our Educators</h2>
+    <div class="educator-container">
+        <div class="educator-card">
+            <img src="path/to/profile1.jpg" alt="Educator Name 1">
+            <div class="educator-info">
+                <h3>John Doe</h3>
+                <p>Senior Educator</p>
+                <a href="https://www.linkedin.com" target="_blank" class="linkedin-icon" onclick="window.open(this.href, '_blank'); return false;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="linkedin-logo">
+                        <path d="M19 0H5C2.238 0 0 2.238 0 5v14c0 2.762 2.238 5 5 5h14c2.762 0 5-2.238 5-5V5c0-2.762-2.238-5-5-5zm-11 19H6v-8h2v8zm-1-9.135c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5zm13 9.135h-2v-4.457c0-2.229-.437-3.747-1.547-3.747-1.368 0-2.047.916-2.383 1.708-.122.294-.151.706-.151 1.122v5.374h-2v-8h1.982v1.091c.346-.577.963-1.405 2.118-1.405 1.55 0 2.7 1.075 2.7 3.396v4.918zm-1.5-12.003c-.542 0-.985.443-.985.985s.443.985.985.985.985-.443.985-.985-.443-.985-.985-.985z"/>
+                    </svg>
+                </a>
+                
+            </div>
+        </div>
+        <div class="educator-card">
+            <img src="path/to/profile2.jpg" alt="Educator Name 2">
+            <div class="educator-info">
+                <h3>Jane Smith</h3>
+                <p>Lead Instructor</p>
+                <a href="https://www.linkedin.com" target="_blank" class="linkedin-icon" onclick="window.open(this.href, '_blank'); return false;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="linkedin-logo">
+                        <path d="M19 0H5C2.238 0 0 2.238 0 5v14c0 2.762 2.238 5 5 5h14c2.762 0 5-2.238 5-5V5c0-2.762-2.238-5-5-5zm-11 19H6v-8h2v8zm-1-9.135c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5zm13 9.135h-2v-4.457c0-2.229-.437-3.747-1.547-3.747-1.368 0-2.047.916-2.383 1.708-.122.294-.151.706-.151 1.122v5.374h-2v-8h1.982v1.091c.346-.577.963-1.405 2.118-1.405 1.55 0 2.7 1.075 2.7 3.396v4.918zm-1.5-12.003c-.542 0-.985.443-.985.985s.443.985.985.985.985-.443.985-.985-.443-.985-.985-.985z"/>
+                    </svg>
+                </a>
+                
+            </div>
+        </div>
+        <!-- Add more educator-card divs here as needed -->
+    </div>
+</div>
+
+<!-- CSS -->
+<style>
+.educators-profile-section {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #Fff;
+}
+
+.educators-profile-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.educator-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.educator-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.educator-card img {
+    width: 100%;
+    border-radius: 50%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.educator-info h3 {
+    font-size: 1.5em;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.educator-info p {
+    font-size: 1em;
+    color: #666;
+}
+
+.linkedin-icon {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.linkedin-logo {
+    width: 24px;
+    height: 24px;
+    fill: #0077B5; /* LinkedIn Blue */
+}
+
+@media (max-width: 768px) {
+    .educator-card {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .educator-card {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .educators-profile-section h2 {
+        font-size: 2em;
+    }
+
+    .educator-info h3 {
+        font-size: 1.2em;
+    }
+}
+</style>
+
+<!-- Intended Learning Outcomes Section -->
+<div class="learning-outcomes">
+    <h2 class="learning-outcomes-title">Intended Learning Outcomes</h2>
+    <p class="learning-outcomes-text">
+        Upon completion of this course, you will be able to:
+        <ul>
+            <li>Understand the core concepts of the subject matter.</li>
+            <li>Apply theoretical knowledge to practical scenarios.</li>
+            <li>Demonstrate problem-solving skills in real-world situations.</li>
+            <li>Communicate findings and insights effectively.</li>
+            <li>Work collaboratively with peers to achieve common goals.</li>
+        </ul>
+    </p>
+</div>
+<!-- Intended Learning Outcomes Section End -->
+
 
                                 <!--div class="mil-accordion-group mil-up">
                                     <div class="mil-accordion-menu">
@@ -467,7 +709,7 @@
                             </a>-->
 
                             <div class="mil-center">
-                                <a href="contact.html" class="mil-button  mil-arrow-place">
+                                <a href="contml" class="mil-button  mil-arrow-place">
                                     <span>Enroll Now </span>
                                 </a>
                             </div>

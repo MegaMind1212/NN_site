@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Cards Scroll Effect</title>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            height: 600vh;
+            background: #f0f0f0;
+        }
+
+        .card {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 310px; /* Increased by 10px */
+            height: 400px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .card h3 {
+            margin: 15px 0 10px;
+            font-size: 1.2em;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .card:nth-child(1) {
+            top: calc(50% + 50px);
+        }
+
+        .card:nth-child(2) {
+            top: calc(50% + 40px);
+        }
+
+        .card:nth-child(3) {
+            top: calc(50% + 30px);
+        }
+
+        .card:nth-child(4) {
+            top: calc(50% + 20px);
+        }
+
+        .card:nth-child(5) {
+            top: calc(50% + 10px);
+        }
+
+        .card:nth-child(6) {
+            top: 50%;
+        }
+
+        @media (min-width: 768px) {
+            .card {
+                width: 510px; /* Increased by 10px */
+                height: 500px; /* Reduced height */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .card {
+                width: 610px; /* Increased by 10px */
+                height: 600px; /* Reduced height */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card6">
+            <a href="../Course6.html" target="_blank"><img src="../img/works/6.png" alt="Course 6 Image"></a>
+            <h3><a href="../Course6.html" target="_blank">Renewable Energy Law & Practice</a></h3>
+            <p>Study the regulations driving the renewable energy sector</p>
+        </div>
+        <div class="card" id="card5">
+            <a href="../Course5.html" target="_blank"><img src="../img/works/5.png" alt="Course 5 Image"></a>
+            <h3><a href="../Course5.html" target="_blank">Fashiontech Law & Practice</a></h3>
+            <p>Delve into the intersection of fashion and technology</p>
+        </div>
+        <div class="card" id="card4">
+            <a href="../Course4.html" target="_blank"><img src="../img/works/4.png" alt="Course 4 Image"></a>
+            <h3><a href="../Course4.html" target="_blank">Space Law & Practice</a></h3>
+            <p>Explore the laws governing outer space activities</p>
+        </div>
+        <div class="card" id="card3">
+            <a href="../Course3.html" target="_blank"><img src="../img/works/3.png" alt="Course 3 Image"></a>
+            <h3><a href="../Course3.html" target="_blank">Web3 Law & Practice</a></h3>
+            <p>Understand the legal framework of Web3</p>
+        </div>
+        <div class="card" id="card2">
+            <a href="../Course2.html" target="_blank"><img src="../img/works/2.jpeg" alt="Course 2 Image"></a>
+            <h3><a href="../Course2.html" target="_blank">Artificial Intelligence Law & Practice</a></h3>
+            <p>Dive into the legal aspects of AI</p>
+        </div>
+        <div class="card" id="card1">
+            <a href="../Course1.html" target="_blank"><img src="../img/works/1b.jpeg" alt="Course 1 Image"></a>
+            <h3><a href="../Course1.html" target="_blank">Data Protection Officer</a></h3>
+            <p>Become a certified Data Protection Officer</p>
+        </div>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        const cardHeight = cards[0].offsetHeight;
+        const containerHeight = document.querySelector('.container').offsetHeight;
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+
+            cards.forEach((card, index) => {
+                const cardTop = (cardHeight + 10) * (cards.length - index - 1);
+                if (scrollPosition > cardTop && scrollPosition < containerHeight - cardHeight * index) {
+                    card.style.transform = `translate(-50%, -${scrollPosition - cardTop}px)`;
+                } else if (scrollPosition <= cardTop) {
+                    card.style.transform = `translate(-50%, -50%)`;
+                } else {
+                    card.style.transform = `translate(-50%, -${containerHeight - cardHeight * index}px)`;
+                }
+            });
+        });
+    </script>
+
+
+
+
+</body>
+</html>
