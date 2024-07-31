@@ -65,6 +65,7 @@
             margin-bottom: 10px;
             display: flex;
             align-items: center;
+            gap: 10px;
         }
 
         .profile .toggle {
@@ -72,12 +73,27 @@
             background: none;
             border: none;
             font-size: 16px;
-            margin-left: 10px;
         }
 
         .profile .info {
-            display: none;
+            display: none; /* Initially hidden */
             margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .linkedin-icon {
+            display: inline-block;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .linkedin-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: #0077b5;
         }
 
         /* Mobile Styles */
@@ -109,51 +125,94 @@
         </div>
         <div class="profiles">
             <div class="profile">
-                <img src="../img/works/1b.jpeg" alt="Anirudh Rastogi">
-                <h3>Anirudh Rastogi</h3>
-                <div class="designation">Founder & Managing Partner <button class="toggle" onclick="toggleInfo(this)">+</button></div>
+                <img src="../img/works/1b.jpeg" alt="Garv Sultania">
+                <h3>Garv Sultania</h3>
+                <div class="designation">Co-Founder 
+                    <a href="https://www.linkedin.com/in/garvsultania/" target="_blank" class="linkedin-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 0H5C2.238 0 0 2.238 0 5v14c0 2.762 2.238 5 5 5h14c2.762 0 5-2.238 5-5V5c0-2.762-2.238-5-5-5zm-11 19H6v-8h2v8zm-1-9.135c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5zm13 9.135h-2v-4.457c0-2.229-.437-3.747-1.547-3.747-1.368 0-2.047.916-2.383 1.708-.122.294-.151.706-.151 1.122v5.374h-2v-8h1.982v1.091c.346-.577.963-1.405 2.118-1.405 1.55 0 2.7 1.075 2.7 3.396v4.918zm-1.5-12.003c-.542 0-.985.443-.985.985s.443.985.985.985.985-.443.985-.985-.443-.985-.985-.985z"/>
+                        </svg>
+                    </a>
+                    <button class="toggle" onclick="toggleInfo(this)">+</button>
+                </div>
                 <div class="info">
-                    Anirudh’s expertise lies in helping businesses navigate ambiguous, evolving and sometimes non-existent regulatory frameworks...
+                    Garv is a Co-Founder at Ikigai Law with extensive experience in legal strategies and operations. His leadership helps shape the firm's approach to complex legal challenges.
                 </div>
             </div>
             <div class="profile">
-                <img src="../img/works/1b.jpeg" alt="Aman Taneja">
-                <h3>Aman Taneja</h3>
-                <div class="designation">Partner <button class="toggle" onclick="toggleInfo(this)">+</button></div>
+                <img src="../img/works/1b.jpeg" alt="Prathik Karthikeyan">
+                <h3>Prathik Karthikeyan</h3>
+                <div class="designation">Co-Founder 
+                    <a href="https://www.linkedin.com/in/prathik-karthikeyan-7b9867a4/" target="_blank" class="linkedin-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 0H5C2.238 0 0 2.238 0 5v14c0 2.762 2.238 5 5 5h14c2.762 0 5-2.238 5-5V5c0-2.762-2.238-5-5-5zm-11 19H6v-8h2v8zm-1-9.135c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5zm13 9.135h-2v-4.457c0-2.229-.437-3.747-1.547-3.747-1.368 0-2.047.916-2.383 1.708-.122.294-.151.706-.151 1.122v5.374h-2v-8h1.982v1.091c.346-.577.963-1.405 2.118-1.405 1.55 0 2.7 1.075 2.7 3.396v4.918zm-1.5-12.003c-.542 0-.985.443-.985.985s.443.985.985.985.985-.443.985-.985-.443-.985-.985-.985z"/>
+                        </svg>
+                    </a>
+                    <button class="toggle" onclick="toggleInfo(this)">+</button>
+                </div>
                 <div class="info">
-                    Aman is an experienced IP, technology and disputes lawyer. At Ikigai, he has focused on online content, intermediary liability...
+                    Prathik is a Co-Founder at Ikigai Law, specializing in legal consulting and strategic guidance. His work ensures innovative solutions for complex legal issues.
                 </div>
             </div>
             <div class="profile">
-                <img src="../img/works/1b.jpeg" alt="Nehaa Chaudhari">
-                <h3>Nehaa Chaudhari</h3>
-                <div class="designation">Partner <button class="toggle" onclick="toggleInfo(this)">+</button></div>
+                <img src="../img/works/1b.jpeg" alt="Tejas Gulati">
+                <h3>Tejas Gulati</h3>
+                <div class="designation">Founding Member 
+                    <a href="https://www.linkedin.com/in/tejasgulati/" target="_blank" class="linkedin-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 0H5C2.238 0 0 2.238 0 5v14c0 2.762 2.238 5 5 5h14c2.762 0 5-2.238 5-5V5c0-2.762-2.238-5-5-5zm-11 19H6v-8h2v8zm-1-9.135c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5zm13 9.135h-2v-4.457c0-2.229-.437-3.747-1.547-3.747-1.368 0-2.047.916-2.383 1.708-.122.294-.151.706-.151 1.122v5.374h-2v-8h1.982v1.091c.346-.577.963-1.405 2.118-1.405 1.55 0 2.7 1.075 2.7 3.396v4.918zm-1.5-12.003c-.542 0-.985.443-.985.985s.443.985.985.985.985-.443.985-.985-.443-.985-.985-.985z"/>
+                        </svg>
+                    </a>
+                    <button class="toggle" onclick="toggleInfo(this)">+</button>
+                </div>
                 <div class="info">
-                    Nehaa heads Ikigai’s advisory and public policy practice. She helps clients understand, strategize for, and navigate India’s regulatory and policy ecosystem...
+                    Tejas is a Founding Member at Ikigai Law with a strong background in legal research and analysis. His insights drive the firm's strategy and operational excellence.
+                </div>
+            </div>
+            <!-- Add additional profiles here -->
+            <div class="profile">
+                <img src="../img/works/1b.jpeg" alt="Garv Sultania">
+                <h3>Garv Sultania</h3>
+                <div class="designation">Co-Founder 
+                    <a href="https://www.linkedin.com/in/garvsultania/" target="_blank" class="linkedin-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 0H5C2.238 0 0 2.238 0 5v14c0 2.762 2.238 5 5 5h14c2.762 0 5-2.238 5-5V5c0-2.762-2.238-5-5-5zm-11 19H6v-8h2v8zm-1-9.135c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5zm13 9.135h-2v-4.457c0-2.229-.437-3.747-1.547-3.747-1.368 0-2.047.916-2.383 1.708-.122.294-.151.706-.151 1.122v5.374h-2v-8h1.982v1.091c.346-.577.963-1.405 2.118-1.405 1.55 0 2.7 1.075 2.7 3.396v4.918zm-1.5-12.003c-.542 0-.985.443-.985.985s.443.985.985.985.985-.443.985-.985-.443-.985-.985-.985z"/>
+                        </svg>
+                    </a>
+                    <button class="toggle" onclick="toggleInfo(this)">+</button>
+                </div>
+                <div class="info">
+                    Garv is a Co-Founder at Ikigai Law with extensive experience in legal strategies and operations. His leadership helps shape the firm's approach to complex legal challenges.
                 </div>
             </div>
             <div class="profile">
-                <img src="../img/works/1b.jpeg" alt="Aparajita Srivastava">
-                <h3>Aparajita Srivastava</h3>
-                <div class="designation">Partner <button class="toggle" onclick="toggleInfo(this)">+</button></div>
+                <img src="../img/works/1b.jpeg" alt="Prathik Karthikeyan">
+                <h3>Prathik Karthikeyan</h3>
+                <div class="designation">Co-Founder 
+                    <a href="https://www.linkedin.com/in/prathik-karthikeyan-7b9867a4/" target="_blank" class="linkedin-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 0H5C2.238 0 0 2.238 0 5v14c0 2.762 2.238 5 5 5h14c2.762 0 5-2.238 5-5V5c0-2.762-2.238-5-5-5zm-11 19H6v-8h2v8zm-1-9.135c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5zm13 9.135h-2v-4.457c0-2.229-.437-3.747-1.547-3.747-1.368 0-2.047.916-2.383 1.708-.122.294-.151.706-.151 1.122v5.374h-2v-8h1.982v1.091c.346-.577.963-1.405 2.118-1.405 1.55 0 2.7 1.075 2.7 3.396v4.918zm-1.5-12.003c-.542 0-.985.443-.985.985s.443.985.985.985.985-.443.985-.985-.443-.985-.985-.985z"/>
+                        </svg>
+                    </a>
+                    <button class="toggle" onclick="toggleInfo(this)">+</button>
+                </div>
                 <div class="info">
-                    Aparajita heads the product and regulatory practice at Ikigai Law. She was recognized for her “ability to provide constant high-quality support”...
+                    Prathik is a Co-Founder at Ikigai Law, specializing in legal consulting and strategic guidance. His work ensures innovative solutions for complex legal issues.
                 </div>
             </div>
             <div class="profile">
-                <img src="storage/people/lblgtsfl.wre.jpg" alt="Sreenidhi Srinivasan">
-                <h3>Sreenidhi Srinivasan</h3>
-                <div class="designation">Partner <button class="toggle" onclick="toggleInfo(this)">+</button></div>
-                <div class="info">
-                    Sreenidhi leads the firm’s data practice, advising the world’s leading technology companies, startups, premier industry bodies, VC funds and several others...
+                <img src="../img/works/1b.jpeg" alt="Tejas Gulati">
+                <h3>Tejas Gulati</h3>
+                <div class="designation">Founding Member 
+                    <a href="https://www.linkedin.com/in/tejasgulati/" target="_blank" class="linkedin-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 0H5C2.238 0 0 2.238 0 5v14c0 2.762 2.238 5 5 5h14c2.762 0 5-2.238 5-5V5c0-2.762-2.238-5-5-5zm-11 19H6v-8h2v8zm-1-9.135c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5zm13 9.135h-2v-4.457c0-2.229-.437-3.747-1.547-3.747-1.368 0-2.047.916-2.383 1.708-.122.294-.151.706-.151 1.122v5.374h-2v-8h1.982v1.091c.346-.577.963-1.405 2.118-1.405 1.55 0 2.7 1.075 2.7 3.396v4.918zm-1.5-12.003c-.542 0-.985.443-.985.985s.443.985.985.985.985-.443.985-.985-.443-.985-.985-.985z"/>
+                        </svg>
+                    </a>
+                    <button class="toggle" onclick="toggleInfo(this)">+</button>
                 </div>
-            </div>
-            <div class="profile">
-                <img src="storage/people/34agje3x.amm.jpg" alt="Astha Srivastava">
-                <h3>Astha Srivastava</h3>
-                <div class="designation">Principal Associate <button class="toggle" onclick="toggleInfo(this)">+</button></div>
                 <div class="info">
-                    Astha focuses on providing regulatory and strategic advice to new-age innovation-led businesses. She has advised clients across diverse sectors...
+                    Tejas is a Founding Member at Ikigai Law with a strong background in legal research and analysis. His insights drive the firm's strategy and operational excellence.
                 </div>
             </div>
         </div>
@@ -161,20 +220,20 @@
 
     <script>
         function toggleInfo(button) {
-            const infoDiv = button.parentElement.nextElementSibling;
-            if (infoDiv.style.display === 'none' || !infoDiv.style.display) {
-                infoDiv.style.display = 'block';
+            const info = button.parentElement.nextElementSibling;
+            if (info.style.display === 'none' || info.style.display === '') {
+                info.style.display = 'block';
                 button.textContent = '−';
-                button.classList.add('active');
             } else {
-                infoDiv.style.display = 'none';
+                info.style.display = 'none';
                 button.textContent = '+';
-                button.classList.remove('active');
             }
         }
+
+        // Initialize descriptions to be hidden
+        document.querySelectorAll('.info').forEach(info => {
+            info.style.display = 'none';
+        });
     </script>
-
-
-
 </body>
 </html>

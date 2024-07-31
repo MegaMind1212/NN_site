@@ -10,6 +10,7 @@
             font-family: Arial, sans-serif;
             overflow: hidden; /* Hide overflow to prevent scrollbars */
             background-color: #000; /* Black background */
+            position: relative; /* For absolute positioning of grid lines */
         }
 
         .title {
@@ -31,6 +32,8 @@
             align-items: center; /* Center items vertically */
             justify-content: flex-end; /* Align items to the right */
             padding-right: 20px; /* Padding from the right end */
+            z-index: 1000; /* Ensure the container is above the grid lines */
+            position: relative; /* For correct stacking */
         }
 
         .carousel {
@@ -63,6 +66,7 @@
             text-align: center;
             box-sizing: border-box;
             cursor: pointer; /* Pointer cursor for clickable cards */
+            position: relative; /* For correct stacking */
         }
 
         .card img {
@@ -80,6 +84,53 @@
         .card p {
             font-size: 0.9em;
             color: #555;
+        }
+
+        .grid-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Allow clicks to pass through */
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 1px,
+                #fff 1px,
+                #fff 2px
+            ),
+            repeating-linear-gradient(
+                -90deg,
+                transparent,
+                transparent 1px,
+                #fff 1px,
+                #fff 2px
+            );
+            z-index: 500; /* Ensure the grid lines are behind title and carousel */
+        }
+
+        .pulse {
+            position: absolute;
+            border: 1px solid white;
+            border-radius: 50%;
+            pointer-events: none; /* Allow clicks to pass through */
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         @media (max-width: 768px) {
@@ -165,5 +216,6 @@
             </div>
         </div>
     </div>
+    <div class="grid-lines"></div>
 </body>
 </html>
